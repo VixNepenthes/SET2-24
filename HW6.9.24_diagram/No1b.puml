@@ -1,0 +1,19 @@
+@startuml no1b
+start
+    :input number;
+    if (number < 0 or number > 1000) then (yes)
+        :status error;
+    else (no)
+        :sum = 0;
+        :i = 1;
+        while (i <= number) is (yes)
+            if(number % i == 0) then (yes)
+                :sum = sum + i;
+            else (no)
+            endif
+            :i = i + 1;
+        endwhile(no)
+    :output sum;
+    endif
+end
+@enduml
