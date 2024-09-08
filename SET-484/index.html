@@ -25,7 +25,7 @@
 				<div class="header__logo">
 					<a href="#"
 						><img
-							src="./favicon.png"
+							src="./assets/favicon.png"
 							alt="logo"
 					/></a>
 				</div>
@@ -1259,12 +1259,12 @@
 						<div class="next-previous__block">
 							<a
 								href="#"
-								class="topic__button primary previous-topic"
+								class="main__button primary previous-topic"
 								>❮ Previous</a
 							>
 							<a
 								href="#"
-								class="topic__button primary next-topic"
+								class="main__button primary next-topic"
 								>Next ❯</a
 							>
 						</div>
@@ -1332,13 +1332,1717 @@
 								</table>
 							</div>
 						</div>
+						<hr />
+						<a id="mark__length"></a>
+						<h2>JavaScript String Length</h2>
+						<p>
+							The <code class="code__span">length</code> property returns the length of a string:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"ABCDEFGHIJKLMNOPQRSTUVWXYZ"</span>
+									;
+									<br />
+									<span class="js__keyword-color">let</span>
+									length = text.length
+								</span>
+							</div>
+							<a
+								href="#"
+								class="main__button main__margin-bottom"
+								>Try it Yourself »</a
+							>
+						</div>
+						<hr />
+						<a id="propertyaccess"></a>
+						<h2>Extracting String Characters</h2>
+						<p>There are 4 methods for extracting string characters:</p>
+						<ul>
+							<li>The <code class="code__span">at(<em>position</em>)</code> Method</li>
+							<li>The <code class="code__span">charAt(<em>position</em>)</code> Method</li>
+							<li>The <code class="code__span">charCodeAt(<em>position</em>)</code> Method</li>
+							<li>Using property access [ ] like in arrays</li>
+						</ul>
+						<hr />
+						<a id="mark_charat"></a>
+						<h2>JavaScript String charAt()</h2>
+						<p>
+							The <code class="code__span">charAt()</code> method returns the character at a
+							specified index (position) in a string:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"HELLO WORLD"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									<span class="js__keyword-color">char</span>
+									= text.<span>charAt</span>(<span class="js__number-color">0</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_charcodeat"></a>
+						<h2>JavaScript String charCodeAt()</h2>
+						<p>
+							The <code class="code__span">charCodeAt()</code> method returns the code of the
+							character at a specified index in a string:
+						</p>
+						<p>The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"HELLO WORLD"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									<span class="js__keyword-color">char</span>
+									= text.<span>charCodeAt</span>(<span class="js__number-color">0</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_at"></a>
+						<h2>JavaScript String at()</h2>
+						<p>
+							<a href="#">ES2022</a> introduced the string method
+							<code class="code__span">at()</code>:
+						</p>
+						<div class="main__example">
+							<h3>Examples</h3>
+							<p>Get the third letter of name:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">const</span>
+									name =
+									<span class="js__string-color">"W3Schools"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									letter = name.<span>at</span>(<span class="js__number-color">2</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button">Try it Yourself »</a>
+							<p>Get the third letter of name:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">const</span>
+									name =
+									<span class="js__string-color">"W3Schools"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									letter = name[<span class="js__number-color">2</span>];<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<p>
+							The <code class="code__span">at()</code> method returns the character at a specified
+							index (position) in a string.
+						</p>
+						<p>
+							The <code class="code__span">at()</code> method is supported in all modern browsers
+							since March 2022:
+						</p>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>
+								The <code class="code__span">at()</code> method is a new addition to JavaScript.
+							</p>
+							<p>
+								It allows the use of negative indexes while
+								<code class="code__span">charAt()</code> do not.
+							</p>
+							Now you can use <code class="code__span">myString.at(-2)</code> instead of
+							<code class="code__span">charAt(myString.length-2)</code>.
+						</div>
+						<h2>Browser Support</h2>
+						<p><code class="code__span">at()</code> is an ES2022 feature.</p>
+						<p>JavaScript 2022 (ES2022) is supported in all modern browsers since March 2023:</p>
+						<table class="table__browser-ref">
+							<tbody>
+								<tr>
+									<th
+										class="browser__chrome"
+										title="Chrome"
+									></th>
+									<th
+										class="browser__edge"
+										title="Edge"
+									></th>
+									<th
+										class="browser__firefox"
+										title="Firefox"
+									></th>
+									<th
+										class="browser__safari"
+										title="Safari"
+									></th>
+									<th
+										class="browser__opera"
+										title="Opera"
+									></th>
+								</tr>
+								<tr>
+									<td>Chrome 94</td>
+									<td>Edge 94</td>
+									<td>Firefox 93</td>
+									<td>Safari 16.4</td>
+									<td>Opera 79</td>
+								</tr>
+								<tr>
+									<td>Sep 2021</td>
+									<td>Sep 2021</td>
+									<td>Oct 2021</td>
+									<td>Mar 2023</td>
+									<td>Oct 2021</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr />
+						<a id="mark_propertyaccess"></a>
+						<h2>Property Access [ ]</h2>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"HELLO WORLD"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									<span class="js__keyword-color">char</span>
+									= text[<span class="js__number-color">0</span>];<span class="js__number-color">
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>Property access might be a little <strong>unpredictable:</strong></p>
+							<ul>
+								<li>It makes strings look like arrays (but they are not)</li>
+								<li>
+									If no character is found, [ ] returns undefined, while charAt() returns an empty
+									string.
+								</li>
+								<li>It is read only. str[0] = "A" gives no error (but does not work!)</li>
+							</ul>
+						</div>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"HELLO WORLD"</span>;<br />
+									text[<span class="js__number-color">0</span>] =
+									<span class="js__string-color">"A"</span>;&nbsp;&nbsp;&nbsp;&nbsp;<span
+										class="js__comment-color"
+										>// Gives no error, but does not work<br
+									/></span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_slice"></a>
+						<h2>Extracting String Parts</h2>
+						<p>There are 3 methods for extracting a part of a string:</p>
+						<ul>
+							<li>
+								<code class="code__span">slice(<em>start</em>, <em>end</em>)</code>
+							</li>
+							<li>
+								<code class="code__span">substring(<em>start</em>, <em>end</em>)</code>
+							</li>
+							<li>
+								<code class="code__span">substr(<em>start</em>, <em>length</em>)</code>
+							</li>
+						</ul>
+						<hr />
+						<h2>JavaScript String slice()</h2>
+						<p>
+							<code class="code__span">slice()</code> extracts a part of a string and returns the
+							extracted part in a new string.
+						</p>
+						<p>
+							The method takes 2 parameters: start position, and end position (end not included).
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<p>Slice out a portion of a string from position 7 to position 13:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = text.<span>slice</span>(<span
+										class="js__number-color"
+										style="color: red"
+										>7</span
+									>,
+									<span
+										class="js__number-color"
+										style="color: red"
+										>13</span
+									>);<span
+										class="js__number-color"
+										style="color: red"
+									>
+									</span>
+								</span>
+							</div>
+							<a
+								target="_blank"
+								href="tryit.asp?filename=tryjs_string_slice"
+								class="main__button main__margin-bottom"
+								>Try it Yourself »</a
+							>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>JavaScript counts positions from zero.</p>
+							<p>First position is 0.</p>
+							<p>Second position is 1.</p>
+						</div>
+						<div class="main__example">
+							<h3>Examples</h3>
+							<p>
+								If you omit the second parameter, the method will slice out the rest of the string:
+							</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = text.<span>slice</span>(<span class="js__number-color">7</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+							<p>If a parameter is negative, the position is counted from the end of the string:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = text.<span>slice</span>(-<span class="js__number-color">12</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+
+							<p>This example slices out a portion of a string from position -12 to position -6:</p>
+
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = text.<span>slice</span>(-<span class="js__number-color">12</span>, -<span
+										class="js__number-color"
+										>6</span
+									>);
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_substring"></a>
+						<h2>JavaScript String substring()</h2>
+						<p>
+							<code class="code__span">substring()</code> is similar to
+							<code class="code__span">slice()</code>.
+						</p>
+						<p>
+							The difference is that start and end values less than 0 are treated as 0 in
+							<code class="code__span">substring()</code>.
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									str =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = str.<span>substring</span>(<span class="js__number-color">7</span>,
+									<span class="js__number-color">13</span>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								target="_blank"
+								href="tryit.asp?filename=tryjs_string_substring"
+								class="main__button main__margin-bottom main__margin-top"
+								>Try it Yourself »</a
+							>
+						</div>
+						<p>
+							If you omit the second parameter, <code class="code__span">substring()</code> will
+							slice out the rest of the string.
+						</p>
+						<hr />
+						<a id="mark_substr"></a>
+						<h2>JavaScript String substr()</h2>
+						<p>
+							<code class="code__span">substr()</code> is similar to
+							<code class="code__span">slice()</code>.
+						</p>
+						<p>
+							The difference is that the second parameter specifies the <b>length</b> of the
+							extracted part.
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									str =
+									<span class="js__string-color">"Apple, Banana, Kiwi"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									part = str.<span>substr</span>(<span class="js__number-color">7</span>,
+									<span class="js__number-color">6</span>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom main__margin-top">Try it Yourself »</a>
+						</div>
+						<hr />
+						<h2>Converting to Upper and Lower Case</h2>
+						<p>
+							A string is converted to upper case with
+							<code class="code__span">toUpperCase()</code>:
+						</p>
+						<p>
+							A string is converted to lower case with
+							<code class="code__span">toLowerCase()</code>:
+						</p>
+						<hr />
+						<a id="mark_touppercase"></a>
+						<h2>JavaScript String toUpperCase()</h2>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color">"Hello World!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									text2 = text1.<span>toUpperCase</span>();<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_tolowercase"></a>
+						<h2>JavaScript String toLowerCase()</h2>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color">"Hello World!"</span
+									>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="js__comment-color">// String<br /></span>
+									<span class="js__keyword-color">let</span>
+									text2 = text1.<span>toLowerCase</span>();&nbsp;&nbsp;<span
+										class="js__comment-color"
+										>// text2 is text1 converted to lower
+									</span></span
+								>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_concat"></a>
+						<h2>JavaScript String concat()</h2>
+						<p><code class="code__span">concat()</code> joins two or more strings:</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color">"Hello"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									text2 =
+									<span class="js__string-color">"World"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									text3 = text1.<span>concat</span>(<span class="js__string-color">" "</span>,
+									text2);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<p>
+							The <code class="code__span">concat()</code> method can be used instead of the plus
+							operator. These two lines do the same:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									text =
+									<span class="js__string-color">"Hello"</span>
+									+
+									<span class="js__string-color">" "</span>
+									+
+									<span class="js__string-color">"World!"</span>;<br />
+									text =
+									<span class="js__string-color">"Hello"</span>.<span>concat</span>(<span
+										class="js__string-color"
+										>" "</span
+									>, <span class="js__string-color">"World!"</span>);
+								</span>
+							</div>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>All string methods return a new string. They don't modify the original string.</p>
+							<p>Formally said:</p>
+							<p>Strings are immutable: Strings cannot be changed, only replaced.</p>
+						</div>
+						<hr />
+						<a id="mark_trim"></a>
+						<h2>JavaScript String trim()</h2>
+						<p>
+							The <code class="code__span">trim()</code> method removes whitespace from both sides
+							of a string:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color"
+										>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello World!
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span
+									>;<br />
+									<span class="js__keyword-color">let</span>
+									text2 = text1.<span>trim</span>();<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<hr />
+						<a id="mark_trimstart"></a>
+						<h2>JavaScript String trimStart()</h2>
+						<p>
+							<a href="#">ECMAScript 2019</a> added the String method
+							<code class="code__span">trimStart()</code> to JavaScript.
+						</p>
+						<p>
+							The <code class="code__span">trimStart()</code> method works like
+							<code class="code__span">trim()</code>, but removes whitespace only from the start of
+							a string.
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color"
+										>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello
+										World!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span
+									>;<br />
+									<span class="js__keyword-color">let</span>
+									text2 = text1.<span>trimStart</span>();<br /><span class="js__number-color">
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<p>
+							JavaScript String <code class="code__span">trimStart()</code> is supported in all
+							modern browsers since January 2020:
+						</p>
+						<div class="main__responsive">
+							<table class="table__browser-ref">
+								<tbody>
+									<tr>
+										<th
+											style="width: 20%"
+											class="browser__chrome"
+											title="Chrome"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__edge"
+											title="Edge"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__firefox"
+											title="Firefox"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__safari"
+											title="Safari"
+										></th>
+										<th
+											style="width: 29%"
+											class="browser__opera"
+											title="Opera"
+										></th>
+									</tr>
+									<tr>
+										<td>Chrome 66</td>
+										<td>Edge 79</td>
+										<td>Firefox 61</td>
+										<td>Safari 12</td>
+										<td>Opera 50</td>
+									</tr>
+									<tr>
+										<td>Apr 2018</td>
+										<td>Jan 2020</td>
+										<td>Jun 2018</td>
+										<td>Sep 2018</td>
+										<td>May 2018</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr />
+						<a id="mark_trimend"></a>
+						<h2>JavaScript String trimEnd()</h2>
+						<p>
+							<a href="js_2019.asp">ECMAScript 2019</a> added the string method
+							<code class="code__span">trimEnd()</code> to JavaScript.
+						</p>
+						<p>
+							The <code class="code__span">trimEnd()</code> method works like
+							<code class="code__span">trim()</code>, but removes whitespace only from the end of a
+							string.
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text1 =
+									<span class="js__string-color"
+										>"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello
+										World!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"</span
+									>;<br />
+									<span class="js__keyword-color">let</span>
+									text2 = text1.<span>trimEnd</span>();<br /><span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_trimend"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+						</div>
+						<p>
+							JavaScript String <code class="code__span">trimEnd()</code> is supported in all modern
+							browsers since January 2020:
+						</p>
+						<div class="main__responsive">
+							<table class="table__browser-ref">
+								<tbody>
+									<tr style="height: 50px">
+										<th
+											style="width: 20%"
+											class="browser__chrome"
+											title="Chrome"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__edge"
+											title="Edge"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__firefox"
+											title="Firefox"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__safari"
+											title="Safari"
+										></th>
+										<th
+											style="width: 19%"
+											class="browser__opera"
+											title="Opera"
+										></th>
+									</tr>
+									<tr>
+										<td>Chrome 66</td>
+										<td>Edge 79</td>
+										<td>Firefox 61</td>
+										<td>Safari 12</td>
+										<td>Opera 50</td>
+									</tr>
+									<tr>
+										<td>Apr 2018</td>
+										<td>Jan 2020</td>
+										<td>Jun 2018</td>
+										<td>Sep 2018</td>
+										<td>May 2018</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<hr />
+						<h2>JavaScript String Padding</h2>
+						<p>
+							<a href="js_2017.asp">ECMAScript 2017</a> added two new string methods to JavaScript:
+							<code class="code__span">padStart()</code> and
+							<code class="code__span">padEnd()</code> to support padding at the beginning and at
+							the end of a string.
+						</p>
+						<hr />
+						<a id="mark_padstart"></a>
+						<h2>JavaScript String padStart()</h2>
+						<p>
+							The <code class="code__span">padStart()</code> method pads a string from the start.
+						</p>
+						<p>
+							It pads a string with another string (multiple times) until it reaches a given length.
+						</p>
+						<div class="main__example">
+							<h3>Examples</h3>
+							<p>Pad a string with "0" until it reaches the length 4:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"5"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padStart</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"0"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding1"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+							<p>Pad a string with "x" until it reaches the length 4:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"5"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padStart</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"x"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding4"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>The <code class="code__span">padStart()</code> method is a string method.</p>
+							<p>To pad a number, convert the number to a string first.</p>
+							<p>See the example below.</p>
+						</div>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									numb =
+									<span class="js__number-color">5</span>;<br />
+									<span class="js__keyword-color">let</span>
+									text = numb.<span>toString</span>();<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padStart</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"0"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding3"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+						</div>
+						<h2>Browser Support</h2>
+						<p>
+							<code class="code__span">padStart()</code> is an
+							<a href="js_2017.asp">ECMAScript 2017</a> feature.
+						</p>
+						<p>ES2017 is supported in all modern browsers since September 2017:</p>
+						<div class="main__responsive">
+							<table class="table__browser-ref">
+								<tbody>
+									<tr>
+										<th
+											class="browser__chrome"
+											title="Chrome"
+										></th>
+										<th
+											class="browser__edge"
+											title="Edge"
+										></th>
+										<th
+											class="browser__firefox"
+											title="Firefox"
+										></th>
+										<th
+											class="browser__safari"
+											title="Safari"
+										></th>
+										<th
+											class="browser__opera"
+											title="Opera"
+										></th>
+									</tr>
+									<tr>
+										<td>Chrome 58</td>
+										<td>Edge 15</td>
+										<td>Firefox 52</td>
+										<td>Safari 11</td>
+										<td>Opera 45</td>
+									</tr>
+									<tr>
+										<td>Apr 2017</td>
+										<td>Apr 2017</td>
+										<td>Mar 2017</td>
+										<td>Sep 2017</td>
+										<td>May 2017</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><code class="code__span">padStart()</code> is not supported in Internet Explorer.</p>
+						<hr />
+						<a id="mark_padend"></a>
+						<h2>JavaScript String padEnd()</h2>
+						<p>The <code class="code__span">padEnd()</code> method pads a string from the end.</p>
+						<p>
+							It pads a string with another string (multiple times) until it reaches a given length.
+						</p>
+						<div class="main__example">
+							<h3>Examples</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"5"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padEnd</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"0"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding2"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"5"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padEnd</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"x"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding6"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>The <code class="code__span">padEnd()</code> method is a string method.</p>
+							<p>To pad a number, convert the number to a string first.</p>
+							<p>See the example below.</p>
+						</div>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									numb =
+									<span class="js__number-color">5</span>;<br />
+									<span class="js__keyword-color">let</span>
+									text = numb.<span>toString</span>();<br />
+									<span class="js__keyword-color">let</span>
+									padded = text.<span>padEnd</span>(<span class="js__number-color">4</span>,<span
+										class="js__string-color"
+										>"0"</span
+									>);<span class="js__number-color"> </span>
+								</span>
+							</div>
+							<a
+								class="main__button main__margin-bottom"
+								href="tryit.asp?filename=tryjs_string_padding5"
+								target="_blank"
+								>Try it Yourself »</a
+							>
+						</div>
+						<h2>Browser Support</h2>
+						<p>
+							<code class="code__span">padEnd()</code> is an
+							<a href="js_2017.asp">ECMAScript 2017</a> feature.
+						</p>
+						<p>ES2017 is supported in all modern browsers since September 2017:</p>
+						<div class="main__responsive">
+							<table class="table__browser-ref">
+								<tbody>
+									<tr>
+										<th
+											class="browser__chrome"
+											title="Chrome"
+										></th>
+										<th
+											class="browser__edge"
+											title="Edge"
+										></th>
+										<th
+											class="browser__firefox"
+											title="Firefox"
+										></th>
+										<th
+											class="browser__safari"
+											title="Safari"
+										></th>
+										<th
+											class="browser__opera"
+											title="Opera"
+										></th>
+									</tr>
+									<tr>
+										<td>Chrome 58</td>
+										<td>Edge 15</td>
+										<td>Firefox 52</td>
+										<td>Safari 11</td>
+										<td>Opera 45</td>
+									</tr>
+									<tr>
+										<td>Apr 2017</td>
+										<td>Apr 2017</td>
+										<td>Mar 2017</td>
+										<td>Sep 2017</td>
+										<td>May 2017</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><code class="code__span">padEnd()</code> is not supported in Internet Explorer.</p>
+						<hr />
+						<a id="mark_repeat"></a>
+						<h2>JavaScript String repeat()</h2>
+						<p>
+							The <code class="code__span">repeat()</code> method returns a string with a number of
+							copies of a string.
+						</p>
+						<p>The <code class="code__span">repeat()</code> method returns a new string.</p>
+						<p>
+							The <code class="code__span">repeat()</code> method does not change the original
+							string.
+						</p>
+						<div class="main__example">
+							<h3>Examples</h3>
+							<p>Create copies of a text:</p>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Hello world!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									result = text.<span>repeat</span>(<span class="js__number-color">2</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a
+								target="_blank"
+								href="tryit.asp?filename=tryjs_string_repeat"
+								class="main__button"
+								>Try it Yourself »</a
+							>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Hello world!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									result = text.<span>repeat</span>(<span class="js__number-color">4</span>);<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a
+								target="_blank"
+								href="tryit.asp?filename=tryjs_string_repeat1"
+								class="main__button main__margin-bottom"
+								>Try it Yourself »</a
+							>
+						</div>
+						<h2>Syntax</h2>
+						<div class="main__block-code">
+							<div><i>string</i>.repeat(<em>count</em>)</div>
+						</div>
+						<h2>Parameters</h2>
+						<table class="main__table--all">
+							<tbody>
+								<tr>
+									<td style="width: 120px">Parameter</td>
+									<td>Description</td>
+								</tr>
+
+								<tr>
+									<td><em>count</em></td>
+									<td>
+										Required.<br />
+										The number of copies wanted.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h2>Return Value</h2>
+						<table class="main__table--all">
+							<tbody>
+								<tr>
+									<td style="width: 120px">Type</td>
+									<td>Description</td>
+								</tr>
+								<tr>
+									<td>String</td>
+									<td>A new string containing the copies.</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr />
+						<h2>Browser Support</h2>
+						<p>
+							<code class="code__span">repeat()</code> is an
+							<a href="js_es6.asp">ES6 feature</a> (JavaScript 2015).
+						</p>
+						<p>ES6 is fully supported in all modern browsers since June 2017:</p>
+						<div class="main__responsive">
+							<table class="table__browser-ref">
+								<tbody>
+									<tr style="height: 60px">
+										<th
+											style="width: 20%"
+											class="browser__chrome"
+											title="Chrome"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__edge"
+											title="Edge"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__firefox"
+											title="Firefox"
+										></th>
+										<th
+											style="width: 20%"
+											class="browser__safari"
+											title="Safari"
+										></th>
+										<th
+											style="width: 19.9%"
+											class="browser__opera"
+											title="Opera"
+										></th>
+									</tr>
+									<tr>
+										<td>Chrome 51</td>
+										<td>Edge 15</td>
+										<td>Firefox 54</td>
+										<td>Safari 10</td>
+										<td>Opera 38</td>
+									</tr>
+									<tr>
+										<td>May 2016</td>
+										<td>Apr 2017</td>
+										<td>Jun 2017</td>
+										<td>Sep 2016</td>
+										<td>Jun 2016</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p><code class="code__span">repeat()</code> is not supported in Internet Explorer.</p>
+						<hr />
+						<a id="mark_replace"></a>
+						<h2>Replacing String Content</h2>
+						<p>
+							The <code class="code__span">replace()</code> method replaces a specified value with
+							another value in a string:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Please visit Microsoft!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									newText = text.<span>replace</span>(<span class="js__string-color"
+										>"Microsoft"</span
+									>, <span class="js__string-color">"W3Schools"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>
+								The <code class="code__span">replace()</code> method does not change the string it
+								is called on.
+							</p>
+							<p>The <code class="code__span">replace()</code> method returns a new string.</p>
+							<p>
+								The <code class="code__span">replace()</code> method replaces
+								<strong>only the first</strong> match
+							</p>
+							<p>
+								If you want to replace all matches, use a regular expression with the /g flag set.
+								See examples below.
+							</p>
+						</div>
+						<p>
+							By default, the <code class="code__span">replace()</code> method replaces
+							<strong>only the first</strong> match:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Please visit Microsoft and Microsoft!"</span
+									>;<br />
+									<span class="js__keyword-color">let</span>
+									newText = text.<span>replace</span>(<span class="js__string-color"
+										>"Microsoft"</span
+									>, <span class="js__string-color">"W3Schools"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<p>
+								<a class="main__button">Try it Yourself »</a>
+							</p>
+						</div>
+						<p>
+							By default, the <code class="code__span">replace()</code> method is case sensitive.
+							Writing MICROSOFT (with upper-case) will not work:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Please visit Microsoft!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									newText = text.<span>replace</span>(<span class="js__string-color"
+										>"MICROSOFT"</span
+									>, <span class="js__string-color">"W3Schools"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<p>
+								<a class="main__button">Try it Yourself »</a>
+							</p>
+						</div>
+						<p>
+							To replace case insensitive, use a <strong>regular expression</strong> with an
+							<code class="code__span">/i</code> flag (insensitive):
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Please visit Microsoft!"</span>;<br />
+									<span class="js__keyword-color">let</span>
+									newText = text.<span>replace</span>(<span class="js__regexp-color"
+										>/MICROSOFT/i</span
+									>, <span class="js__string-color">"W3Schools"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<p>
+								<a class="main__button">Try it Yourself »</a>
+							</p>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>Regular expressions are written without quotes.</p>
+						</div>
+						<p>
+							To replace all matches, use a <strong>regular expression</strong> with a
+							<code class="code__span">/g</code> flag (global match):
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									<span class="js__keyword-color">let</span>
+									text =
+									<span class="js__string-color">"Please visit Microsoft and Microsoft!"</span
+									>;<br />
+									<span class="js__keyword-color">let</span>
+									newText = text.<span>replace</span>(<span class="js__regexp-color"
+										>/Microsoft/g</span
+									>, <span class="js__string-color">"W3Schools"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<p>
+								<a class="main__button">Try it Yourself »</a>
+							</p>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>
+								You will learn a lot more about regular expressions in the chapter
+								<a href="#">JavaScript Regular Expressions</a>.
+							</p>
+						</div>
+						<hr />
+						<a id="mark_replaceall"></a>
+						<h2>JavaScript String ReplaceAll()</h2>
+						<p>
+							In 2021, JavaScript introduced the string method
+							<code class="code__span">replaceAll()</code>:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									text = text.<span>replaceAll</span>(<span class="js__string-color">"Cats"</span
+									>,<span class="js__string-color">"Dogs"</span>);<br />
+									text = text.<span>replaceAll</span>(<span class="js__string-color">"cats"</span
+									>,<span class="js__string-color">"dogs"</span>);<span class="js__number-color">
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<p>
+							The <code class="code__span">replaceAll()</code> method allows you to specify a
+							regular expression instead of a string to be replaced.
+						</p>
+						<p>
+							If the parameter is a regular expression, the global flag (g) must be set, otherwise a
+							TypeError is thrown.
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									text = text.<span>replaceAll</span>(<span class="js__regexp-color">/Cats/g</span
+									>,<span class="js__string-color">"Dogs"</span>);<br />
+									text = text.<span>replaceAll</span>(<span class="js__regexp-color">/cats/g</span
+									>,<span class="js__string-color">"dogs"</span>);<br /><span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<div class="main__note">
+							<h2>Note</h2>
+							<p>
+								<code class="code__span">replaceAll()</code> is an <a href="#">ES2021</a> feature.
+							</p>
+							<p>
+								<code class="code__span">replaceAll()</code> does not work in Internet Explorer.
+							</p>
+						</div>
+						<hr />
+						<h2>Converting a String to an Array</h2>
+						<div class="main__note">
+							<p>If you want to work with a string as an array, you can convert it to an array.</p>
+						</div>
+						<a id="mark_split"></a>
+						<h2>JavaScript String split()</h2>
+						<p>
+							A string can be converted to an array with the
+							<code class="code__span">split()</code> method:
+						</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									text.<span>split</span>(<span class="js__string-color">","</span
+									>)&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__comment-color"
+										>// Split on commas<br
+									/></span>
+									text.<span>split</span>(<span class="js__string-color">" "</span
+									>)&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__comment-color"
+										>// Split on spaces<br
+									/></span>
+									text.<span>split</span>(<span class="js__string-color">"|"</span
+									>)&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__comment-color"
+										>// Split on pipe
+									</span></span
+								>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<p>
+							If the separator is omitted, the returned array will contain the whole string in index
+							[0].
+						</p>
+						<p>If the separator is "", the returned array will be an array of single characters:</p>
+						<div class="main__example">
+							<h3>Example</h3>
+							<div class="main__block-code">
+								<span>
+									text.<span>split</span>(<span class="js__string-color">""</span>)<span
+										class="js__number-color"
+									>
+									</span>
+								</span>
+							</div>
+							<a class="main__button main__margin-bottom">Try it Yourself »</a>
+						</div>
+						<div class="main__note">
+							<h2>Complete String Reference</h2>
+							<p>For a complete String reference, go to our:</p>
+							<p><a href="#">Complete JavaScript String Reference</a>.</p>
+							<p>
+								The reference contains descriptions and examples of all string properties and
+								methods.
+							</p>
+						</div>
+						<form
+							autocomplete="off"
+							spellcheck="false"
+							id="main__exercise-form"
+							action="#"
+							method="post"
+						>
+							<h2>Test Yourself With Exercises</h2>
+							<div class="exercise__window">
+								<h2>Exercise:</h2>
+								<p>Convert the text into an UPPERCASE text:</p>
+
+								<div class="exercise__pre-container">
+									<pre>let txt = "Hello World!";<br>txt = txt.<input name="ex1" spellcheck="false" maxlength="13" style="width: 136px;">;
+									</pre>
+								</div>
+								<br />
+								<button
+									type="submit"
+									class="main__button main__margin-bottom"
+								>
+									Submit Answer »
+								</button>
+								<p>
+									<a
+										target="_blank"
+										href="exercise_js.asp?filename=exercise_js_string_methods1"
+										>Start the Exercise</a
+									>
+								</p>
+							</div>
+						</form>
+						<div class="next-previous__block end-section"></div>
+						<a
+							href="#"
+							class="main__button primary previous-topic"
+							>❮ Previous</a
+						>
+						<a
+							href="#"
+							class="main__button primary next-topic"
+							>Next ❯</a
+						>
 					</div>
+
 					<div class="section__right">
-						<h1>Hello World</h1>
+						<div class="side-section">
+							<a
+								id="upperfeatureshowcaselink"
+								class="ga-right ga-top-fullaccess-jan ga-top-program-frontend-jun24"
+								href="https://campus.w3schools.com/collections/package-deals/products/front-end-course"
+								target="_blank"
+							>
+								<img
+									id="upperfeatureshowcase300"
+									src="./assets/img_program_up_frontend_160.png"
+									alt="Get Certified"
+									style="width: auto; border-radius: 5px"
+								/>
+							</a>
+						</div>
+						<div class="side-section">
+							<h4>
+								<a
+									href="https://www.w3schools.com/colors/colors_picker.asp"
+									target="_blank"
+									>COLOR PICKER</a
+								>
+							</h4>
+							<a href="#">
+								<img
+									src="./assets/colorpicker2000.png"
+									alt="colorpicker"
+									loading="lazy"
+								/>
+							</a>
+						</div>
+						<div class="side-section">
+							<div class="sharethis">
+								<a
+									href="https://www.youtube.com/@w3schools"
+									target="_blank"
+									title="W3Schools on YouTube"
+									><i class="fa-brands fa-youtube"></i
+								></a>
+								<a
+									href="https://www.linkedin.com/company/w3schools.com/"
+									target="_blank"
+									title="W3Schools on LinkedIn"
+									><i class="fa-brands fa-linkedin"></i
+								></a>
+								<a
+									href="https://discord.com/invite/w3schools"
+									target="_blank"
+									title="Join the W3schools community on Discord"
+									><i class="fa-brands fa-discord"></i
+								></a>
+								<a
+									href="https://www.facebook.com/w3schoolscom/"
+									target="_blank"
+									title="W3Schools on Facebook"
+									><i class="fa-brands fa-facebook"></i
+								></a>
+								<a
+									href="https://www.instagram.com/w3schools.com_official/"
+									target="_blank"
+									title="W3Schools on Instagram"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+						</div>
 					</div>
 				</div>
+				<footer>
+					<hr />
+				</footer>
 				<div class="footer__wrapper">
-					<div class="footer__content"></div>
+					<div class="footer__content">
+						<div class="footer__section">
+							<div class="footer__links--1">
+								<a
+									href="https://www.w3schools.com//www.w3schools.com"
+									aria-label="W3Schools.com"
+									alt="W3Schools.com"
+								>
+									<img
+										src="./assets/favicon.png"
+										alt="logo"
+										class="footer__logo"
+									/>
+								</a>
+							</div>
+							<div class="footer__links--1">
+								<a
+									href="https://www.w3schools.com/plus/index.php"
+									title="Become a PLUS user and unlock powerful features"
+									class="ga-bottom-plus"
+									>PLUS</a
+								>
+							</div>
+							<div class="footer__links--1">
+								<a title="Get your own website with W3Schools Spaces">SPACES</a>
+							</div>
+							<div class="footer__links--1">
+								<a
+									href="https://campus.w3schools.com/collections/certifications"
+									title="Document your knowledge by getting certified"
+									>GET CERTIFIED</a
+								>
+							</div>
+							<div class="footer__links--1">
+								<a
+									title="Contact us about W3Schools Academy for educational institutions"
+									class="ga-bottom-teachers"
+									>FOR TEACHERS</a
+								>
+							</div>
+							<div class="footer__links--1">
+								<a
+									title="Contact us about W3Schools Academy for your organization"
+									class="ga-bottom-business"
+									>FOR BUSINESS</a
+								>
+							</div>
+							<div class="footer__links--1">
+								<a title="Contact us about sales or errors">CONTACT US</a>
+							</div>
+						</div>
+						<div class="footer__section">
+							<div class="footer__links--2">
+								<h5>Top Tutorials</h5>
+								<a href="/https://www.w3schools.com/html/default.asp">HTML Tutorial</a><br />
+								<a href="/https://www.w3schools.com/css/default.asp">CSS Tutorial</a><br />
+								<a href="/https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a><br />
+								<a href="/https://www.w3schools.com/howto/default.asp">How To Tutorial</a><br />
+								<a href="/https://www.w3schools.com/sql/default.asp">SQL Tutorial</a><br />
+								<a href="/https://www.w3schools.com/python/default.asp">Python Tutorial</a><br />
+								<a href="/https://www.w3schools.com/w3css/default.asp">W3.CSS Tutorial</a><br />
+								<a href="/https://www.w3schools.com/bootstrap/bootstrap_ver.asp"
+									>Bootstrap Tutorial</a
+								><br />
+								<a href="/https://www.w3schools.com/php/default.asp">PHP Tutorial</a><br />
+								<a href="/https://www.w3schools.com/java/default.asp">Java Tutorial</a><br />
+								<a href="/https://www.w3schools.com/cpp/default.asp">C++ Tutorial</a><br />
+								<a href="/https://www.w3schools.com/jquery/default.asp">jQuery Tutorial</a><br />
+							</div>
+							<div class="footer__links--2">
+								<h5>Top References</h5>
+								<a href="https://www.w3schools.com/tags/default.asp">HTML Reference</a><br />
+								<a href="https://www.w3schools.com/cssref/index.php">CSS Reference</a><br />
+								<a href="https://www.w3schools.com/jsref/default.asp">JavaScript Reference</a><br />
+								<a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">SQL Reference</a><br />
+								<a href="https://www.w3schools.com/python/python_reference.asp">Python Reference</a
+								><br />
+								<a href="https://www.w3schools.com/w3css/w3css_references.asp">W3.CSS Reference</a
+								><br />
+								<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp"
+									>Bootstrap Reference</a
+								><br />
+								<a href="https://www.w3schools.com/php/php_ref_overview.asp">PHP Reference</a><br />
+								<a href="https://www.w3schools.com/colors/colors_names.asp">HTML Colors</a><br />
+								<a href="https://www.w3schools.com/java/java_ref_keywords.asp">Java Reference</a
+								><br />
+								<a href="https://www.w3schools.com/angular/angular_ref_directives.asp"
+									>Angular Reference</a
+								><br />
+								<a href="https://www.w3schools.com/jquery/jquery_ref_overview.asp"
+									>jQuery Reference</a
+								><br />
+							</div>
+							<div class="footer__links--2">
+								<h5>Top Examples</h5>
+								<a href="https://www.w3schools.com/html/html_examples.asp">HTML Examples</a><br />
+								<a href="https://www.w3schools.com/css/css_examples.asp">CSS Examples</a><br />
+								<a href="https://www.w3schools.com/js/js_examples.asp">JavaScript Examples</a><br />
+								<a href="https://www.w3schools.com/howto/default.asp">How To Examples</a><br />
+								<a href="https://www.w3schools.com/sql/sql_examples.asp">SQL Examples</a><br />
+								<a href="https://www.w3schools.com/python/python_examples.asp">Python Examples</a
+								><br />
+								<a href="https://www.w3schools.com/w3css/w3css_examples.asp">W3.CSS Examples</a
+								><br />
+								<a href="https://www.w3schools.com/bootstrap/bootstrap_examples.asp"
+									>Bootstrap Examples</a
+								><br />
+								<a href="https://www.w3schools.com/php/php_examples.asp">PHP Examples</a><br />
+								<a href="https://www.w3schools.com/java/java_examples.asp">Java Examples</a><br />
+								<a href="https://www.w3schools.com/xml/xml_examples.asp">XML Examples</a><br />
+								<a href="https://www.w3schools.com/jquery/jquery_examples.asp">jQuery Examples</a
+								><br />
+							</div>
+							<div class="footer__links--2">
+								<a
+									href="https://campus.w3schools.com/collections/course-catalog"
+									target="_blank"
+									><h5>Get Certified</h5></a
+								>
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/html-certificate"
+									target="_blank"
+									>HTML Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/css-certificate"
+									target="_blank"
+									>CSS Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/javascript-certificate"
+									target="_blank"
+									>JavaScript Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/front-end-certificate"
+									target="_blank"
+									>Front End Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/sql-certificate"
+									target="_blank"
+									>SQL Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/python-certificate"
+									target="_blank"
+									>Python Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/php-certificate"
+									target="_blank"
+									>PHP Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/jquery-certificate"
+									target="_blank"
+									>jQuery Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/java-certificate"
+									target="_blank"
+									>Java Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/c-certificate"
+									target="_blank"
+									>C++ Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/c-certificate-1"
+									target="_blank"
+									>C# Certificate</a
+								><br />
+								<a
+									href="https://campus.w3schools.com/collections/certifications/products/xml-certificate"
+									target="_blank"
+									>XML Certificate</a
+								><br />
+							</div>
+						</div>
+						<div class="footer__brands">
+							<a
+								target="_blank"
+								href="https://www.youtube.com/@w3schools"
+								title="W3Schools on YouTube"
+								><i class="fa-brands fa-youtube"></i
+							></a>
+							<a
+								target="_blank"
+								href="https://www.linkedin.com/company/w3schools.com/"
+								title="W3Schools on LinkedIn"
+								><i class="fa-brands fa-linkedin"></i
+							></a>
+							<a
+								target="_blank"
+								href="https://discord.com/invite/w3schools"
+								title="Join the W3schools community on Discord"
+								><i class="fa-brands fa-discord"></i
+							></a>
+							<a
+								target="_blank"
+								href="https://www.facebook.com/w3schoolscom/"
+								title="W3Schools on Facebook"
+								><i class="fa-brands fa-facebook"></i
+							></a>
+							<a
+								target="_blank"
+								href="https://www.instagram.com/w3schools.com_official/"
+								title="W3Schools on Instagram"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+							<a
+								target="_blank"
+								href="/forum/default.asp"
+								title="Forum"
+								class="text__link"
+								>FORUM</a
+							>
+							<a
+								target="_blank"
+								href="/about/default.asp"
+								title="About W3Schools"
+								class="text__link"
+								>ABOUT</a
+							>
+							<a
+								target="_blank"
+								href="https://93d08a94.sibforms.com/serve/MUIFAL7VLqgr8nEWysDptuWiUJ0DEebkO51K6W-AD9fn1feCp90H2ZG9qLpbFOLns5x12uB9nzdotA0mKAoqqB9hpveHgfrYDpx8wDrHMs42_WrfsHNWXwMKlzaXWo1P8XmO2wUepgCfXgGQI11iUAInSi0ImpWbmz7J7_AcxWUCjMlVhF-SFqugUKkplNzXFESL1C9FYBImJCCL"
+								title="Contact us about W3Schools Academy for educational institutions and organizations"
+								class="text__link"
+								>ACADEMY</a
+							>
+						</div>
+						<div class="footer__text">
+							W3Schools is optimized for learning and training. Examples might be simplified to
+							improve reading and learning.<br class="footer-hide-special" />
+							Tutorials, references, and examples are constantly reviewed to avoid errors, but we
+							cannot warrant full correctness<br class="footer-hide-special" />
+							of all content. While using W3Schools, you agree to have read and accepted our
+							<a href="https://www.w3schools.com/about/about_copyright.asp">terms of use</a>,
+							<a href="https://www.w3schools.com/about/about_privacy.asp"
+								>cookie and privacy policy</a
+							>.<br /><br />
+							<a href="https://www.w3schools.com/about/about_copyright.asp">Copyright 1999-2024</a>
+							by Refsnes Data. All Rights Reserved.
+							<a href="//www.w3schools.com/w3css/default.asp">W3Schools is Powered by W3.CSS</a
+							>.<br /><br />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
