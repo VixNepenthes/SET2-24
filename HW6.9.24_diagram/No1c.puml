@@ -1,0 +1,16 @@
+@startuml no1c
+start
+    :input number;
+    if (number < 0 or number > 1000) then (yes)
+        :status error;
+    else (no)
+        :sum = 0;
+        while(number > 0) is (yes)
+            :temporary = number % 10;
+            :sum = sum + temporary;
+            :number = Math.floor(number / 10);
+        endwhile (no)
+    :output sum;
+    endif
+end
+@enduml

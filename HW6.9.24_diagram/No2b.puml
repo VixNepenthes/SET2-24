@@ -1,0 +1,34 @@
+@startuml no2b
+start
+    :input number;
+    if (number < 100000) then (yes)
+        :status error;
+    else (no)
+        :copiedNumber = number;
+        :max2nd = 0;
+        :temporary = number % 10;
+        :max1st = temporary;
+        :number = Math.floor(number / 10);
+    while(number > 0) is (yes)
+        :temporary = number % 10;
+        if(temporary >= max) then (yes)
+            :max1st = temporary;
+        else (no)
+        endif
+        :number = Math.floor(number / 10);
+    endwhile (no)
+    while(copiedNumber > 0) is (yes)
+        :temporary = copiedNumber % 10;
+        if(temporary < max1st) then (yes)
+            if(temporary >= max2nd) then (yes)
+                :max2nd = temporary;
+            else (no)
+            endif
+        else (no)
+        endif
+        :copiedNumber = Math.floor(copiedNumber / 10);
+    endwhile (no)
+    :output max2nd;
+    endif
+end
+@enduml
