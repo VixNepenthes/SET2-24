@@ -1,0 +1,15 @@
+@startuml isPalindrome
+start
+    :input string;
+    if(string === '') then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        :const reversedString = reverseString(string);
+        note right
+        use reverseString
+        is written in 4a
+        end note
+        #PaleGreen:return reversedString === string;
+    endif
+end
+@enduml

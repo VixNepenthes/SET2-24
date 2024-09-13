@@ -1,0 +1,19 @@
+@startuml isPerfectNumber
+start
+    :input number;
+    if (number <= 0) then (yes)
+        :return false;
+    else (no)
+        :let sumOfDivisors = 0;
+        :let i = 1;
+       while (i < number) is (yes)
+            if(number % i === 0) then (yes)
+                :sumOfDivisors = sumOfDivisors + i;
+            else (no)
+            endif
+            :i = i + 1;
+        endwhile (no)
+        :return sumOfDivisors === number;
+    endif
+end
+@enduml

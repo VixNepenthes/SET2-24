@@ -6,22 +6,22 @@ start
     else (no)
         :copiedNumber = number;
         :max2nd = 0;
-        :temporary = number % 10;
-        :max1st = temporary;
+        :temporaryNumber = number % 10;
+        :max1st = temporaryNumber;
         :number = Math.floor(number / 10);
     while(number > 0) is (yes)
-        :temporary = number % 10;
-        if(temporary >= max) then (yes)
-            :max1st = temporary;
+        :temporaryNumber = number % 10;
+        if(temporaryNumber >= max) then (yes)
+            :max1st = temporaryNumber;
         else (no)
         endif
         :number = Math.floor(number / 10);
     endwhile (no)
     while(copiedNumber > 0) is (yes)
-        :temporary = copiedNumber % 10;
-        if(temporary < max1st) then (yes)
-            if(temporary >= max2nd) then (yes)
-                :max2nd = temporary;
+        :temporaryNumber = copiedNumber % 10;
+        if(temporaryNumber < max1st) then (yes)
+            if(temporaryNumber >= max2nd) then (yes)
+                :max2nd = temporaryNumber;
             else (no)
             endif
         else (no)

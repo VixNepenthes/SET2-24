@@ -1,0 +1,19 @@
+@startuml removeSpace
+start
+    :input string;
+    if(string === '') then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        :let result = '';
+        :let i = 0;
+        while(i < string.length) is (yes)
+            if(string[i] !== '\t') then (yes)
+                :result = result + string[i];
+            else (no)
+            endif
+            :i = i + 1;
+        endwhile (no)
+        #PaleGreen:return result;
+    endif
+end
+@enduml

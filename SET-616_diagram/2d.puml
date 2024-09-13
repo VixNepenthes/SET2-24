@@ -1,0 +1,26 @@
+@startuml no2d
+start 
+    :input number;
+    if (number < 100000) then (yes)
+        #PaleVioletRed:status error;
+    else (no)
+        :let arrayOfPrimeNumbers =[];
+        while(number > 0) is (yes)
+            :let temporaryNumber = number % 10;
+            if(temporaryNumber === 1) then (yes)
+            else (no)
+                if (isPrimeNumber(temporaryNumber)) then (yes)
+                note right
+                //isPrimeNumber// 
+                is written in 3a.puml
+                end note
+                :arrayOfPrimeNumbers.push(temporaryNumber);
+                else (no)
+                endif
+            endif
+            :number = Math.floor(number / 10);
+        endwhile (no)
+        #PaleGreen:return arrayOfPrimeNumbers;
+    endif
+end
+@enduml

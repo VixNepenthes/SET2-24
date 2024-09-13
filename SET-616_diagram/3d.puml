@@ -1,0 +1,22 @@
+@startuml findPrimeNumbers
+start
+    if(number <= 1) then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        :let arrayOfPrimeNumbers =[];
+        :let i = 2;
+        while(i <= number) is (yes)
+            if(isPrimeNumber(i)) then (yes)
+            note right
+                isPrimeNumber
+                is written at 3a.puml
+            end note
+                :arrayOfPrimeNumbers.push(i);
+            else (no)
+            endif
+            :i = i + 1;
+        endwhile (no)
+        #PaleGreen:return arrayOfPrimeNumbers;
+    endif
+end
+@enduml

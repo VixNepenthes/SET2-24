@@ -1,0 +1,31 @@
+@startuml longestPalindrome
+start
+    note right
+    isPalindrome 
+    is written in 4c.puml
+    end note
+    :input string;
+    if(string === '') then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        :let longestPalindrome = '';
+        :let i = 0;
+        while (i < string.length) is (yes)
+            :let j = i;
+            while (j < string.length) is (yes)
+                :let currentString = string.substring(i, j + 1);
+                if(isPalindrome(currentString)) then (yes)
+                    if(currentString.length > longestPalindrome.length) then (yes)
+                        :longestPalindrome = currentString;
+                    else (no)
+                    endif
+                else (no)
+                endif
+                :j = j + 1;
+            endwhile(no)
+            :i = i + 1; 
+        endwhile (no)
+        :return longestPalindrome;
+    endif
+end
+@enduml

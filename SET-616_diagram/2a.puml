@@ -4,13 +4,13 @@ start
     if (number < 100000) then (yes)
         :status error;
     else (no)
-        :temporary = number % 10;
+        :temporaryNumber = number % 10;
         :number = Math.floor(number / 10);
-        :max = temporary;
+        :max = temporaryNumber;
     while(number > 0) is (yes)
-        :temporary = number %10;
-        if(temporary >= max) then (yes)
-            :max = temporary;
+        :temporaryNumber = number %10;
+        if(temporaryNumber >= max) then (yes)
+            :max = temporaryNumber;
         else (no)
         endif
         :number = Math.floor(number / 10);

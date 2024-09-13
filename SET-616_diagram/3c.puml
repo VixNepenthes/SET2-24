@@ -1,0 +1,11 @@
+@startuml isPerfectSquare
+start
+    :input number;
+    if (number <= 0) then (yes)
+        #PaleVioletRed:return false;
+    else (no)
+    :let squareRootNumber = Math.sqrt(number);
+    #PaleGreen:return squareRootNumber * squareRootNumber === number; 
+    endif
+end
+@enduml

@@ -1,0 +1,16 @@
+@startuml reverseString
+start
+    :input string;
+    if(string === '') then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        :let reversedString = '';
+        :let i = string.length;
+        while(i > = 0) is (yes)
+            :reversedString = reversedString + string[i];
+            :i = i - 1;
+        endwhile (no)
+        #PaleGreen:return reversedString;
+    endif
+end
+@enduml
