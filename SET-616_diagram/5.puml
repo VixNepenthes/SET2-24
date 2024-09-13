@@ -1,0 +1,20 @@
+@startuml sortArrayNumber
+start
+    :input arrayOfNumbers;
+    :let i = 0;
+    while (i < arrayOfNumbers.length - 1) is (yes)
+        :let j = 0;
+        while(j < arrayOfNumbers.length - i - 1) is (yes)
+            if(arrayOfNumbers[j] > arrayOfNumbers[j + 1]) then (yes)
+                :const temporaryNumber = arrayOfNumbers[j];
+                :arrayOfNumbers[j] = arrayOfNumbers[j + 1];
+                :arrayOfNumbers[j + 1] = temporaryNumber;
+            else (no)
+            endif
+            :j = j + 1;
+        endwhile (no)
+        :i = i + 1;
+    endwhile
+    #PaleGreen:return arrayOfNumbers;
+end
+@enduml

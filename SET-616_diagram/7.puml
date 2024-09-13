@@ -1,0 +1,12 @@
+@startuml
+start
+    :input number;
+    :let arrayOfFibonacci = [0,1];
+    :let i = 2;
+    while (i < number) is (yes)
+        :arrayOfFibonacci[i] = arrayOfFibonacci[i - 1] + arrayOfFibonacci[i - 2];
+        :i = i + 1;
+    endwhile (no)
+    #PaleGreen:return arrayOfFibonacci;
+end
+@enduml

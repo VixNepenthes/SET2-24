@@ -1,0 +1,14 @@
+@startuml calculateFactorialNumber
+start
+    :input number;
+    if(number < 0) then (yes)
+        #PaleVioletRed:return status error;
+    else (no)
+        if(number === 0) then (yes)
+            #PaleGreen:return 1;
+        else (no)
+            #PaleGreen:return number * calculateFactorialNumber(number - 1);
+        endif
+    endif
+end
+@enduml
