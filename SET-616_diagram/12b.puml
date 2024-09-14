@@ -1,0 +1,19 @@
+@startuml findMinOf2DArrayNumbers
+start
+    #PaleGoldenRod:input arrayNumbers;
+    :let minimumNumber = arrayNumbers[0][0];
+    :let i = 0;
+    while(i < arrayNumbers.length) is (yes)
+        :let j = 0;
+        while (j < arrayNumbers[i].length) is (yes)
+            if(arrayNumbers[i][j] < minimumNumber) then (yes)
+                :minimumNumber = arrayNumbers[i][j];
+            else (no)
+            endif
+            :j = j + 1;
+        endwhile (no)
+        :i = i + 1;
+    endwhile (no)
+    #PaleGreen:return minimumNumber;
+stop
+@enduml

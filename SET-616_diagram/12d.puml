@@ -1,0 +1,23 @@
+@startuml findPrimeNumberIn2DArrayNumber
+start
+    #PaleGoldenRod:input arrayNumbers;
+    :let arrayOfPrimeNumbers = [];
+    :let i = 0;
+    while (i < arrayNumbers.length) is (yes)
+        :let j = 0;
+        while (j < arrayNumbers[i].length) is (yes)
+            if(isPrimeNumber(arrayNumbers[i][j])) then (yes)
+                note right
+                    isPrimeNumber
+                    using in 3a.puml
+                end note
+                :arrayOfPrimeNumbers.push(arrayNumbers[i][j]);
+            else (no)
+            endif
+            :j = j + 1;
+        endwhile (no)
+        :i = i + 1;
+    endwhile (no)
+    #PaleGreen:return arrayOfPrimeNumbers;
+stop
+@enduml

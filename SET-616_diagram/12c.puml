@@ -1,0 +1,22 @@
+@startuml
+start
+    #PaleGoldenRod:input arrayNumbers;
+    #PaleGoldenRod:input k;
+    #PaleGoldenRod:input isRow;
+    :let sum = 0;
+    if(isRow === true) then (yes)
+        :let j = 0;
+        while (j < arrayNumbers[k].length) is (yes)
+            :sum = sum + arrayNumbers[k][j];
+            :j = j + 1;
+        endwhile (no)
+    else (no)
+        :let i = 0;
+        while (i < arrayNumbers.length) is (yes)
+            :sum = sum + arrayNumbers[i][k];
+            :i = i + 1;
+        endwhile (no)
+    endif
+    #PaleGreen:return sum;
+stop
+@enduml
