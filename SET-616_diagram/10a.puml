@@ -1,0 +1,11 @@
+@startuml greatestCommonDivisor
+start
+    #PaleGoldenRod:input numberOne,numberTwo;
+    while(numberTwo !== 0) is (yes)
+        :const temporaryNumber = numberTwo;
+        :numberTwo = numberOne % numberTwo;
+        :numberOne = temporaryNumber;
+    endwhile (no)
+    #PaleGreen:return numberOne;
+stop
+@enduml

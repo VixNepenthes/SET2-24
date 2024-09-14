@@ -1,0 +1,29 @@
+@startuml sortIncreasing/Decreasing
+start
+    #PaleGoldenRod:input arrayOfNumbersOrString;
+    #PaleGoldenRod:input optional increasing/decreasing;
+    if(typeof arrayOfNumbersOrString === string) then (yes)
+        :arrayOfString = [];
+        :let i = 0;
+        while(i < arrayOfNumbersOrString.length) is (yes)
+            :arrayOfString.push(arrayOfNumbersOrString[i]);
+            :i = i + 1;
+        endwhile (no)
+        :const sortedArrayString = bubbleSort(arrayOfString,isIncreasing);
+        note right
+            using bubbleSort in 5.puml
+        end note
+        :let sortedString = '';
+        :let i = 0;
+        while(i < sortedArrayString.length) is (yes)
+            :sortedString += sortedArrayString[i];
+            :i = i + 1;
+        endwhile (no)
+        #PaleGreen:return sortedString;
+        stop
+    else (no)
+        :const sortedArrayNumbers = bubbleSort(arrayOfNumbersOrString,isIncreasing);
+        #PaleGreen:return sortedArrayNumbers;
+        stop
+    endif
+@enduml

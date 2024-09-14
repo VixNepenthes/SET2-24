@@ -1,0 +1,11 @@
+@startuml sumArrayNumbers
+start
+    #PaleGoldenRod:input arrayNumbers;
+    :let i = 0;
+    :let sum = 0;
+    while(i < arrayNumbers.length) is (yes)
+        :sum = sum + arrayNumbers[i];
+    endwhile (no)
+    #PaleGreen:return sum;
+stop
+@enduml

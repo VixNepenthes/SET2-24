@@ -1,0 +1,9 @@
+@startuml leastCommonMultiple
+start
+    #PaleGoldenRod:input numberOne,numberTwo;
+    #PaleGreen:return (numberOne * numberTwo) / greatestCommonDivisor(numberOne,numberTwo);
+    note right
+        greatestCommonDivisor using in 10a.puml
+    end note
+stop
+@enduml

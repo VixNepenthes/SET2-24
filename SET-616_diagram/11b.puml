@@ -1,0 +1,17 @@
+@startuml
+start
+    #PaleGoldenRod:input arrayNumbers;
+    :let i = 0;
+    :let minimumNumber = arrayNumbers[0];
+    :let minimumIndex = 0;
+    while(i < arrayNumbers.length) is (yes)
+        if(arrayNumbers[i] <= minimumNumber) then (yes)
+            :minimumNumber = arrayNumbers[i];
+            :minimumIndex = i ;
+        else (no)
+        endif
+        :i = i + 1;
+    endwhile (no)
+    #PaleGreen:return minimumIndex;
+stop
+@enduml

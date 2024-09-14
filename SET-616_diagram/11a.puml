@@ -1,0 +1,17 @@
+@startuml
+start
+    #PaleGoldenRod:input arrayNumbers;
+    :let i = 0;
+    :let maximumNumber = 0;
+    :let maximumIndex = 0;
+    while(i < arrayNumbers.length) is (yes)
+        if(arrayNumbers[i] >= maximumNumber) then (yes)
+            :maximumNumber = arrayNumbers[i];
+            :maximumIndex = i ;
+        else (no)
+        endif
+        :i = i + 1;
+    endwhile (no)
+    #PaleGreen:return maximumIndex;
+stop
+@enduml
