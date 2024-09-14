@@ -1,0 +1,53 @@
+@startuml
+start
+    #PaleGoldenRod:input arrayOfNumbersOrString;
+     #PaleGoldenRod:input optional isIncreasing default is true;
+    :let maxLength = 1;
+    :let currentLength = 1;
+    if(typeof arrayOfNumbersOrString === string) then (yes)
+        :let i =1;
+        while(i < arrayOfNumbersOrString.length) is (yes)
+            if(isIncreasing === true) then (yes)
+                if(arrayOfNumbersOrString.charCodeAt(i) >= arrayOfNumbersOrString.charCodeAt(i - 1)) then (yes)
+                    :currentLength++;
+                else (no)
+                    :currentLength = 1;
+                endif
+            else (no)
+                if(arrayOfNumbersOrString.charCodeAt(i) <= arrayOfNumbersOrString.charCodeAt(i - 1)) then (yes)
+                    :currentLength++;
+                else (no)
+                    :currentLength = 1;
+                endif
+            endif
+            if(currentLength > maxLength) then (yes)
+                :maxLength = currentLength;
+            else (no)
+            endif
+        endwhile (no)
+    else (no)
+        :let i =1;
+        while(i < arrayOfNumbersOrString.length) is (yes)
+            if(isIncreasing === true) then (yes)
+                if(arrayOfNumbersOrString[i] >= arrayOfNumbersOrString[i - 1]) then (yes)
+                    :currentLength++;
+                else (no)
+                    :currentLength = 1;
+                endif
+            else (no)
+                if(arrayOfNumbersOrString[i] <= arrayOfNumbersOrString[i - 1]) then (yes)
+                    :currentLength++;
+                else (no)
+                    :currentLength = 1;
+                endif
+            endif
+            if(currentLength > maxLength) then (yes)
+                :maxLength = currentLength;
+            else (no)
+            endif
+        endwhile (no)
+
+    endif
+    #PaleGreen:return if increasing/decreasing maxlength;
+end
+@enduml

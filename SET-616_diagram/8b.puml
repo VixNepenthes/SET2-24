@@ -1,0 +1,21 @@
+@startuml countOccurences
+start
+    :input string;
+    :input character;
+    if(typeof string !== 'string' || typeof character !== 'string') then (yes)
+        #PaleVioletRed:Return error status;
+    else (no)
+        :let count = 0;
+        :let i = 0;
+        while (i < string.length) is (yes)
+            if(string[i] === character) then (yes)
+                :count++;
+            else (no)
+            endif
+            :i = i + 1;
+        endwhile (no)
+        #PaleGreen:return count;
+    endif
+    
+end
+@enduml

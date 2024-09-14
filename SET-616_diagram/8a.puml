@@ -1,0 +1,25 @@
+@startuml countVowels
+start
+    :input string;
+    if(typeof string !== 'string') then (yes)
+        #PaleVioletRed:Return error status;
+    else (no)
+        :arrayOfVowels = ['u', 'e', 'o', 'a', 'i', 'U', 'E', 'O', 'A', 'I'];
+        :let count = 0;
+        :let i = 0;
+        while (i < string.length) is (yes)
+            :let j = 0;
+            while (j < arrayOfVowels.length) is (yes)
+                if(string[i] === arrayOfVowels[j]) then (yes)
+                    :count ++;
+                    break;
+                else (no)
+                endif
+            :j = j + 1;
+            endwhile (no)
+        :i = i + 1;
+        endwhile (no)
+    #PaleGreen:return count;
+    endif
+end
+@enduml
