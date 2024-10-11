@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import CounterB from '../CounterB';
-import CounterContext from '../context/CounterContext';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from '../store/slice/counterSlice';
 const CounterA = () => {
-	const { counter, handleClick } = useContext(CounterContext);
+	const count = useSelector((state) => state.counter.value);
+	const dispatch = useDispatch();
 	return (
 		<div
 			style={{
@@ -17,10 +18,10 @@ const CounterA = () => {
 		>
 			<h1>CounterA</h1>
 			<div>
-				<span>Counted: {counter}</span>
+				<span>Counted: {count}</span>
 				<button
 					style={{ marginLeft: '5px' }}
-					onClick={handleClick}
+					onClick={() => dispatch(increment())}
 				>
 					Click
 				</button>
