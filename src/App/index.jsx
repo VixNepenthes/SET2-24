@@ -1,11 +1,16 @@
-import React from 'react';
-import CounterA from '../CounterA';
-import './App.css';
+import Profile from '../components/profile';
+import ConditionalLogin from '../components/conditionalLogin';
+import RenderList from '../components/renderList';
+import ClickCount from '../components/clickCount';
+
 const App = () => {
 	return (
-		<>
-			<CounterA />
-		</>
+		<div>
+			<RenderList />
+			<ConditionalLogin />
+			<Profile />
+			<ClickCount />
+		</div>
 	);
 };
 
