@@ -1,4 +1,4 @@
-function sumEachNumber(number) {
+function sumEachDigit(number) {
 	if (number < 0 || number > 1000) {
 		return 'Need number < 1000';
 	}
@@ -10,8 +10,8 @@ function sumEachNumber(number) {
 	}
 	return sum;
 }
-console.log('sum each number: ', sumEachNumber(-1));
-console.log('sum each number: ', sumEachNumber(1001));
-console.log('sum each number: ', sumEachNumber(323));
-console.log('sum each number: ', sumEachNumber(456));
-console.log('sum each number: ', sumEachNumber(789));
+console.log('sum each number: ', sumEachDigit(-1));
+console.log('sum each number: ', sumEachDigit(1001));
+console.log('sum each number: ', sumEachDigit(323));
+console.log('sum each number: ', sumEachDigit(456));
+console.log('sum each number: ', sumEachDigit(789));

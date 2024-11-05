@@ -1,9 +1,9 @@
 function findMinIndex(arrayNumbers) {
-	let minimumNumber = arrayNumbers[0];
+	let minimumDigit = arrayNumbers[0];
 	let minimumIndex = 0;
 	for (let i = 0; i < arrayNumbers.length; i++) {
-		if (arrayNumbers[i] <= minimumNumber) {
-			minimumNumber = arrayNumbers[i];
+		if (arrayNumbers[i] <= minimumDigit) {
+			minimumDigit = arrayNumbers[i];
 			minimumIndex = i;
 		}
 	}

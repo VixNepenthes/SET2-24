@@ -10,7 +10,7 @@ function reverseString(string) {
 	return reversedString;
 }
 
-function isPalindrome1(string) {
+function checkIsPalindrome1(string) {
 	if (string === '') {
 		return 'error! it is not string';
 	}
@@ -20,7 +20,7 @@ function isPalindrome1(string) {
 
 // Solution 2
 
-function isPalindrome2(string) {
+function checkIsPalindrome2(string) {
 	let left = 0;
 	let right = string.length - 1;
 	while (left < right) {
@@ -33,5 +33,5 @@ function isPalindrome2(string) {
 	return true;
 }
 
-console.log(isPalindrome1('abcdcba'));
-console.log(isPalindrome2('abcdcba'));
+console.log(checkIsPalindrome1('abcdcba'));
+console.log(checkIsPalindrome2('abcdcba'));

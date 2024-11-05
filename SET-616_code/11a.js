@@ -1,9 +1,9 @@
 function findMaxIndex(arrayNumbers) {
-	let maximumNumber = 0;
+	let maximumDigit = 0;
 	let maximumIndex = 0;
 	for (let i = 0; i < arrayNumbers.length; i++) {
-		if (arrayNumbers[i] >= maximumNumber) {
-			maximumNumber = arrayNumbers[i];
+		if (arrayNumbers[i] >= maximumDigit) {
+			maximumDigit = arrayNumbers[i];
 			maximumIndex = i + 1;
 		}
 	}

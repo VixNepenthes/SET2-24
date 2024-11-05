@@ -1,4 +1,4 @@
-function findMax(number) {
+function findLargestDigit(number) {
 	if (number <= 100000) {
 		return 'number must bigger than 100000';
 	}
@@ -15,8 +15,8 @@ function findMax(number) {
 	return max;
 }
 
-console.log('Find max: ', findMax(345));
-console.log('Find max: ', findMax(3457844));
-console.log('Find max: ', findMax(3459421));
-console.log('Find max: ', findMax(3459123573421));
-console.log('Find max: ', findMax(3459129573481));
+console.log('Find max: ', findLargestDigit(345));
+console.log('Find max: ', findLargestDigit(3457844));
+console.log('Find max: ', findLargestDigit(3459421));
+console.log('Find max: ', findLargestDigit(3459123573421));
+console.log('Find max: ', findLargestDigit(3459129573481));

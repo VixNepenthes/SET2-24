@@ -1,4 +1,4 @@
-function isPrimeNumber(number) {
+function checkIsPrimeNumber(number) {
 	if (number <= 1) {
 		return false;
 	} else {
@@ -18,7 +18,7 @@ function findAndPrintPrimeNumberInside(number) {
 	let arrayOfPrimeNumbers = [];
 	while (number > 0) {
 		let temporaryNumber = number % 10;
-		if (isPrimeNumber(temporaryNumber)) {
+		if (checkIsPrimeNumber(temporaryNumber)) {
 			arrayOfPrimeNumbers.push(temporaryNumber);
 		}
 		number = Math.floor(number / 10);

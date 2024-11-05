@@ -1,9 +1,9 @@
-function longestPalindrome(string) {
+function findLongestPalindrome(string) {
 	let longestPalindrome = '';
 	for (let i = 0; i < string.length; i++) {
 		for (let j = i; j < string.length; j++) {
 			let currentString = string.substring(i, j + 1);
-			if (isPalindrome(currentString) && currentString.length > longestPalindrome.length) {
+			if (checkIsPalindrome(currentString) && currentString.length > longestPalindrome.length) {
 				longestPalindrome = currentString;
 			}
 		}
@@ -11,7 +11,7 @@ function longestPalindrome(string) {
 	return longestPalindrome;
 }
 
-function isPalindrome(string) {
+function checkIsPalindrome(string) {
 	let left = 0;
 	let right = string.length - 1;
 	while (left < right) {
@@ -24,4 +24,4 @@ function isPalindrome(string) {
 	return true;
 }
 
-console.log(longestPalindrome('forgeeksskeegfor'));
+console.log(findLongestPalindrome('forgeeksskeegfor'));

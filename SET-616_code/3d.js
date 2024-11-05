@@ -1,4 +1,4 @@
-function isPrimeNumber(number) {
+function checkIsPrimeNumber(number) {
 	if (typeof number !== 'number') {
 		return 'Please input number';
 	}
@@ -20,7 +20,7 @@ function findPrimeNumber(number) {
 	}
 	const arrayOfPrimeNumbers = [];
 	for (let i = 2; i <= number; i++) {
-		if (isPrimeNumber(i)) {
+		if (checkIsPrimeNumber(i)) {
 			arrayOfPrimeNumbers.push(i);
 		}
 	}

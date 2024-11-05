@@ -1,4 +1,4 @@
-function findMax2nd(number) {
+function findSecondLargestDigit(number) {
 	if (number <= 100000) {
 		return 'number must bigger than 100000';
 	}
@@ -26,8 +26,8 @@ function findMax2nd(number) {
 	return max2nd;
 }
 
-console.log('Find max: ', findMax2nd(345));
-console.log('Find max: ', findMax2nd(3457844));
-console.log('Find max: ', findMax2nd(3459421));
-console.log('Find max: ', findMax2nd(3459123573421));
-console.log('Find max: ', findMax2nd(3459129573481));
+console.log('Find max: ', findSecondLargestDigit(345));
+console.log('Find max: ', findSecondLargestDigit(3457844));
+console.log('Find max: ', findSecondLargestDigit(3459421));
+console.log('Find max: ', findSecondLargestDigit(3459123573421));
+console.log('Find max: ', findSecondLargestDigit(3459129573481));

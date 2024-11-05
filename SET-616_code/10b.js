@@ -1,4 +1,4 @@
-function greatestCommonDivisor(numberOne, numberTwo) {
+function findGreatestCommonDivisor(numberOne, numberTwo) {
 	while (numberTwo !== 0) {
 		const temp = numberTwo;
 		numberTwo = numberOne % numberTwo;
@@ -7,8 +7,8 @@ function greatestCommonDivisor(numberOne, numberTwo) {
 	return numberOne;
 }
 
-function leastCommonMultiple(numberOne, numberTwo) {
-	return (numberOne * numberTwo) / greatestCommonDivisor(numberOne, numberTwo);
+function findLeastCommonMultiple(numberOne, numberTwo) {
+	return (numberOne * numberTwo) / findGreatestCommonDivisor(numberOne, numberTwo);
 }
 
-console.log(leastCommonMultiple(12, 15));
+console.log(findLeastCommonMultiple(12, 15));

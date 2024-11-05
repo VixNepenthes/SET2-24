@@ -1,4 +1,4 @@
-function findMin(number) {
+function findSmallestDigit(number) {
 	if (number <= 100000) {
 		return 'number must bigger than 100000';
 	}
@@ -15,8 +15,8 @@ function findMin(number) {
 	return min;
 }
 
-console.log('Find min: ', findMin(345));
-console.log('Find min: ', findMin(3457844));
-console.log('Find min: ', findMin(3459421));
-console.log('Find min: ', findMin(3459123573421));
-console.log('Find min: ', findMin(3459129573481));
+console.log('Find min: ', findSmallestDigit(345));
+console.log('Find min: ', findSmallestDigit(3457844));
+console.log('Find min: ', findSmallestDigit(3459421));
+console.log('Find min: ', findSmallestDigit(3459123573421));
+console.log('Find min: ', findSmallestDigit(3459129573481));

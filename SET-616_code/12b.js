@@ -1,4 +1,4 @@
-function findMinOf2DArrayNumbers(arrayNumbers) {
+function findSmallestNumberOf2DArrayNumbers(arrayNumbers) {
 	let minimumNumber = arrayNumbers[0][0];
 	for (let i = 0; i < arrayNumbers.length; i++) {
 		for (let j = 0; j < arrayNumbers[i].length; j++) {
@@ -11,7 +11,7 @@ function findMinOf2DArrayNumbers(arrayNumbers) {
 }
 
 console.log(
-	findMinOf2DArrayNumbers([
+	findSmallestNumberOf2DArrayNumbers([
 		[1, 2, 3],
 		[14, 25, 31],
 		[90, 30, 12],

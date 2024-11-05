@@ -1,4 +1,4 @@
-function isPerfectNumber(number) {
+function checkIsPerfectNumber(number) {
 	if (typeof number !== 'number') {
 		return 'Please input number';
 	}
@@ -14,4 +14,4 @@ function isPerfectNumber(number) {
 	return sumOfDivisors === number;
 }
 
-console.log(isPerfectNumber(28));
+console.log(checkIsPerfectNumber(28));

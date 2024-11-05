@@ -1,4 +1,4 @@
-function isPrimeNumber(number) {
+function checkIsPrimeNumber(number) {
 	if (typeof number !== 'number') {
 		return 'Please input number';
 	}
@@ -14,8 +14,8 @@ function isPrimeNumber(number) {
 	}
 }
 
-console.log(isPrimeNumber(11));
-console.log(isPrimeNumber(7));
-console.log(isPrimeNumber(17));
-console.log(isPrimeNumber(19));
-console.log(isPrimeNumber(5));
+console.log(checkIsPrimeNumber(11));
+console.log(checkIsPrimeNumber(7));
+console.log(checkIsPrimeNumber(17));
+console.log(checkIsPrimeNumber(19));
+console.log(checkIsPrimeNumber(5));

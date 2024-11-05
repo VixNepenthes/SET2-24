@@ -1,4 +1,4 @@
-function isPerfectSquare(number) {
+function checkIsPerfectSquare(number) {
 	if (number <= 0) {
 		return false;
 	}
@@ -6,4 +6,4 @@ function isPerfectSquare(number) {
 	return squareRootNumber * squareRootNumber === number;
 }
 
-console.log(isPerfectSquare(144));
+console.log(checkIsPerfectSquare(144));

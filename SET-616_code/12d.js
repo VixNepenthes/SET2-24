@@ -1,4 +1,4 @@
-function isPrimeNumber(number) {
+function checkIsPrimeNumber(number) {
 	if (typeof number !== 'number') {
 		return 'Please input number';
 	}
@@ -18,7 +18,7 @@ function findPrimeNumberIn2DArrayNumber(arrayNumbers) {
 	let arrayOfPrimeNumbers = [];
 	for (let i = 0; i < arrayNumbers.length; i++) {
 		for (let j = 0; j < arrayNumbers[i].length; j++) {
-			if (isPrimeNumber(arrayNumbers[i][j])) {
+			if (checkIsPrimeNumber(arrayNumbers[i][j])) {
 				arrayOfPrimeNumbers.push(arrayNumbers[i][j]);
 			}
 		}
