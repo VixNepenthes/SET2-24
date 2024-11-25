@@ -1,0 +1,10 @@
+next-env.d.ts
+.next
+node_modules
+dist
+tsconfig.tsbuildinfo
+.cache
+.vagrant
+.bash_history
+.node_repl_history
+.sudo_as_admin_successful
