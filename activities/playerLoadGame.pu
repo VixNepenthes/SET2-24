@@ -1,0 +1,12 @@
+@startuml
+
+start
+
+:Player enter load button;
+:Player select game to load;
+:System load history of game state from database;
+:Player continue game with bot;
+
+stop
+
+@enduml

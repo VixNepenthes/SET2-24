@@ -1,0 +1,20 @@
+@startuml
+
+start
+:Player enter exit button;
+if (confirm) then (yes)
+    if (checkMode) then (bot)
+        if (System ask player to confirm save game) then (yes)
+            :System save game state;
+        else (no)
+            :System set loser as player;
+        endif
+    else (player)
+        :System set loser as player;
+    endif
+else (no)
+    :Player continues game;
+endif
+stop
+
+@enduml

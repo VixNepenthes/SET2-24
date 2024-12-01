@@ -1,0 +1,19 @@
+@startuml
+
+start
+repeat
+    :Player Selected Piece;
+    :Player Selected Move;
+    repeat while (checkPossibleMoves and checkMove) is (no) not (yes)
+
+:Move Piece;
+if (checkWin) then (yes)
+    :System shows win message;
+    :End Game;
+else (no)
+    :System save history;
+    :Next Turn;
+endif
+stop
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+start
+:Player enter save button;
+if (gameWithBot) then (yes)
+    :Player confirm save;
+    if (confirm) then (yes)
+        :Save game;
+        :System save history of game state in database;
+    else (no)
+        :Player continues game;
+    endif
+else (no)
+    :Invalid action;
+endif
+stop
+
+@enduml
