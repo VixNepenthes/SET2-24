@@ -46,7 +46,6 @@ Vagrant.configure("2") do |config|
     # Cài đặt Nginx
     sudo apt-get install -y nginx
     sudo systemctl enable nginx
-    sudo systemctl start nginx
 
     # Kiểm tra và chạy thử Docker
     echo "Kiểm tra Docker daemon..."
@@ -59,9 +58,9 @@ Vagrant.configure("2") do |config|
     docker --version
     docker-compose --version
     nginx -v
-
-    # Chạy một container thử nghiệm
-    echo "Chạy container thử nghiệm..."
-    docker run hello-world || echo "Docker chưa hoạt động đúng, vui lòng kiểm tra lại."
-  SHELL
+    cd myapp
+    sudo lsof -i :80
+    sudo systemctl stop nginx
+    docker-compose up --build
+    SHELL
 end
